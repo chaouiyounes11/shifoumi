@@ -167,3 +167,8 @@ alert ("computer : " + computer);
   }
 
 }
+if (player === 3) {
+  alert("user a gagné")
+} else {
+  alert ("computer a gagné")
+}
