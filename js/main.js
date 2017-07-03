@@ -1,4 +1,82 @@
-//
+/*=========================================
+===========================================
+=============CODE FROM MYSELF=============
+==========================================
+==========================================
+==========================================*/
+
+
+var player = 0;
+var ordi = 0;
+
+while (player < 3 && ordi < 3) {
+
+var user = prompt ('pierre, feuille, ciseaux ?');
+var computer = Math.random();
+
+if (computer < 0.34) {
+  computer = "pierre";
+} else if (computer > 0.33 && computer < 0.64) {
+  computer = "feuille";
+} else {
+  computer = "ciseaux";
+}
+
+alert ("computer : " + computer);
+
+
+
+  if (user === computer) {
+    alert('rejoue');
+  }
+  else if (user === "pierre") {
+    if (computer === "feuille") {
+      alert ("computer gagne");
+      ordi++;
+
+
+    } else {
+      alert ("user gagne");
+      player++;
+    }
+
+  }
+  else if (user === "feuille") {
+     if (computer === "pierre") {
+      alert ('user gagne');
+      player++;
+
+    } else {
+      alert ('computer gagne');
+      ordi++;
+    }
+
+  }
+  else if (user === 'ciseaux') {
+    if (computer === "pierre") {
+      alert ('computer gagne');
+      ordi++;
+
+    } else {
+      alert('user gagne');
+      player++;
+    }
+  }
+
+}
+if (player === 3) {
+  alert("user a gagné")
+} else {
+  alert ("computer a gagné")
+}
+
+
+/*=========================================
+===========================================
+========CODE FROM CODACADEMY ==============
+==========================================
+==========================================
+==========================================*/
 // var userChoice = prompt("Do you choose rock, paper or scissors?");
 // var nbRandom = Math.random();
 // var computerChoice = '';
@@ -68,6 +146,13 @@
 //
 // compare (userChoice, computerChoice);
 
+/*=========================================
+===========================================
+========CODE FROM GREGOIRE, SIMPLON=======
+==========================================
+==========================================
+==========================================*/
+
 
 //
 //
@@ -107,68 +192,3 @@
 //       }
 //       document.getElementById('resultat').innerHTML = " " + scoreJ + " - " + scoreO + " ";
 //     }
-
-
-var player = 0;
-var ordi = 0;
-
-while (player < 3 && ordi < 3) {
-
-var user = prompt ('pierre, feuille, ciseaux ?');
-var computer = Math.random();
-
-if (computer < 0.34) {
-  computer = "pierre";
-} else if (computer > 0.33 && computer < 0.64) {
-  computer = "feuille";
-} else {
-  computer = "ciseaux";
-}
-
-alert ("computer : " + computer);
-
-
-
-  if (user === computer) {
-    alert('rejoue');
-  }
-  else if (user === "pierre") {
-    if (computer === "feuille") {
-      alert ("computer gagne");
-      ordi++;
-
-
-    } else {
-      alert ("user gagne");
-      player++;
-    }
-
-  }
-  else if (user === "feuille") {
-     if (computer === "pierre") {
-      alert ('user gagne');
-      player++;
-
-    } else {
-      alert ('computer gagne');
-      ordi++;
-    }
-
-  }
-  else if (user === 'ciseaux') {
-    if (computer === "pierre") {
-      alert ('computer gagne');
-      ordi++;
-
-    } else {
-      alert('user gagne');
-      player++;
-    }
-  }
-
-}
-if (player === 3) {
-  alert("user a gagné")
-} else {
-  alert ("computer a gagné")
-}
