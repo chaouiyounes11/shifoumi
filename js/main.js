@@ -112,7 +112,7 @@
 var player = 0;
 var ordi = 0;
 
-while (player < 4 && ordi < 4) {
+while (player < 3 && ordi < 3) {
 
 var user = prompt ('pierre, feuille, ciseaux ?');
 var computer = Math.random();
