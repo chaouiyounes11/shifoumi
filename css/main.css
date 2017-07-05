@@ -94,16 +94,97 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+img {
+  width: 100%;
+}
 
+h1 {
+  text-align: center;
+}
 
+input {
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px 5px;
+  background-color: lightgrey;
+  color: blue;
+}
 
+.inputContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
+.inputContainer button {
+  border-radius: 0px;
+margin-left: 5%;
+background-color: lightyellow;
+color: lightseagreen;
 
+}
+]
 
+.fight p {
+text-align: center;
+}
 
+.userChoice h3, .computerChoice h3 {
+  width: 100%;
+  text-align: center;
+}
 
+.userChoice a, .computerChoice a {
+  width: 33%;
+}
 
+.userChoice, .computerChoice  {
+  display: flex;
+  width: 100%;
+  align-items: baseline;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 
+.userChoice figure, .computerChoice figure {
+  width: 50%;
+  margin: 0px;
+  margin: auto;
+  opacity: .75;
+}
+
+figure:hover {
+  opacity: 1;
+}
+
+figure img:hover {
+  width: 105%;
+}
+
+.userChoice {
+  margin-bottom: 5%;
+}
+
+.roundBattle h3 {
+  text-align: center;
+}
+.battle {
+  padding: 100px;
+  margin: 0% 15%;
+  border: 1px solid black;
+}
+
+.score {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.score h3 {
+  width: 100%;
+  text-align: center;
+}
 
 
 

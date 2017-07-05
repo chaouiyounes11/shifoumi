@@ -21,7 +21,73 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>This is a funny game coded in JavaScript</p>
+        <h1>SHIFOUMI</h1>
+
+        <div class="inputContainer">
+        <input type="text" name="username" value="" placeholder="type your name" id="userName">
+        <button type="button" name="button">click</button>
+        </div>
+
+        <div class="userChoice">
+          <h3>PLAYER NAME</h3>
+          <a href="#" class="user" onclick="feuille()">
+          <figure>
+            <img src="img/paper.png" alt="">
+          </figure>
+          </a>
+
+          <a href="#" class="user" onclick="pierre()">
+          <figure>
+            <img src="img/rock.png" alt="">
+          </figure>
+          </a>
+
+          <a href="#" class="user" onclick="ciseaux()">
+          <figure>
+            <img src="img/scissors.png" alt="">
+          </figure>
+          </a>
+
+        </div>
+
+        <div class="roundBattle">
+          <h3>BATTLE</h3>
+          <div class="battle">
+
+          </div>
+        </div>
+
+        <div class="computerChoice">
+          <h3>COMPUTER</h3>
+
+          <a href="#">
+          <figure>
+            <img src="img/paper.png" alt="">
+          </figure>
+          </a>
+
+          <a href="#">
+          <figure>
+            <img src="img/rock.png" alt="">
+          </figure>
+          </a>
+
+          <a href="#">
+          <figure>
+            <img src="img/scissors.png" alt="">
+          </figure>
+          </a>
+
+        </div>
+
+        <div class="score">
+
+          <h3>SCORE</h3>
+
+          <p>Score Player :</p>
+          <p>Score Computer :</p>
+
+        </div>
 
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>

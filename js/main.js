@@ -4,14 +4,12 @@
 ==========================================
 ==========================================
 ==========================================*/
-
-
 var player = 0;
 var ordi = 0;
 
 while (player < 3 && ordi < 3) {
-
-var user = prompt ('pierre, feuille, ciseaux ?');
+//
+var user = prompt('chi');
 var computer = Math.random();
 
 if (computer < 0.34) {
@@ -29,7 +27,7 @@ alert ("computer : " + computer);
   if (user === computer) {
     alert('rejoue');
   }
-  else if (user === "pierre") {
+else if (user === "pierre") {
     if (computer === "feuille") {
       alert ("computer gagne");
       ordi++;
