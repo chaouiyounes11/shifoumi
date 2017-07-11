@@ -4,69 +4,163 @@
 ==========================================
 ==========================================
 ==========================================*/
+
+/*=========================================
+===========================================
+=============VARIABLES=====================
+==========================================
+==========================================
+==========================================*/
+
+var userimg = document.getElementsByClassName('userPictures');
+var userChoice="";
+var computer = "";
 var player = 0;
 var ordi = 0;
 
-while (player < 3 && ordi < 3) {
-//
-var user = prompt('chi');
-var computer = Math.random();
 
-if (computer < 0.34) {
-  computer = "pierre";
-} else if (computer > 0.33 && computer < 0.64) {
-  computer = "feuille";
-} else {
-  computer = "ciseaux";
+/*=========================================
+===========================================
+=============FUNCTIONS=====================
+==========================================
+==========================================
+==========================================*/
+
+//INPUT  function TO REGISTER USERNAME
+function myFunction() {
+  document.getElementById('name').innerHTML = document.getElementById('inputUser').value.toUpperCase();
+  document.getElementById('inputUser').value.toUpperCase();
 }
 
-alert ("computer : " + computer);
+//FUNCTION THAT SETS USER IMAGES TO OPACITY "1"
+
+function userOpacity () {
+  for (var i=0; i<userimg.length; i++) {
+    userimg[i].style.opacity="0.5";
+  }
+  console.log(userChoice);
+  document.getElementById(userChoice).style.opacity = '1';
+}
 
 
+//FUNCTION USER CHOICE
+function choiceUser(choix){
+  userChoice = choix;
+  document.getElementById("choixUser").innerHTML= "User : " +userChoice;
+  computerChoice ();
+  userOpacity();
+  compare(userChoice, computer);
+}
+
+//VAR FOR COMPUTER CHOICE
+function computerChoice () {
+  computer = Math.random();
+  if (computer < 0.34){
+    computer= "pierre";
+    document.getElementById('rock').style.opacity="1";
+  }
+   else if (computer > 0.33 && computer <0.64){
+    computer= "feuille";
+    document.getElementById('paper').style.opacity="1";
+  }
+  else {
+    computer= "ciseaux";
+    document.getElementById('scissors').style.opacity="1";
+
+  }
+  document.getElementById("choixOrdi").innerHTML= "Ordi : " +computer;
+}
+
+
+//FUNCTION THAT DEFINES SHIFOUMI's RULES
+
+function compare (user, computer) {
 
   if (user === computer) {
-    alert('rejoue');
+     document.getElementById("resultat").innerHTML ="égalité";
   }
-else if (user === "pierre") {
+  else if (user === "pierre") {
     if (computer === "feuille") {
-      alert ("computer gagne");
-      ordi++;
-
-
-    } else {
-      alert ("user gagne");
+ document.getElementById("resultat").innerHTML ="computer gagne";
+       ordi++;
+    }
+    else {
+      document.getElementById("resultat").innerHTML ="user gagne";
       player++;
     }
-
   }
   else if (user === "feuille") {
      if (computer === "pierre") {
-      alert ('user gagne');
+       document.getElementById("resultat").innerHTML ="user gagne";
       player++;
 
     } else {
-      alert ('computer gagne');
+      document.getElementById("resultat").innerHTML ="computer gagne";
       ordi++;
     }
 
   }
   else if (user === 'ciseaux') {
     if (computer === "pierre") {
-      alert ('computer gagne');
+      document.getElementById("resultat").innerHTML ="computer gagne";
       ordi++;
 
     } else {
-      alert('user gagne');
+      document.getElementById("resultat").innerHTML ="user gagne";
       player++;
     }
   }
 
+  //CHECK FINAL RESULT
+  document.getElementById("scoreUser").innerHTML ="User " + player;
+  document.getElementById("scoreComputer").innerHTML ="Computer " + ordi;
+
+  //UPDATE SCORE IN HTML
+  if (player === 3) {
+    document.getElementById("name").innerHTML =" a gagné la partie !";
+     player = 0;
+     ordi = 0;
+  }
+  if (ordi === 3) {
+    document.getElementById("name").innerHTML =" a perdu la partie !";
+     player = 0;
+     ordi = 0;
+  }
+
+
+
+
 }
-if (player === 3) {
-  alert("user a gagné")
-} else {
-  alert ("computer a gagné")
-}
+
+
+/*=========================================
+===========================================
+=============SCRIPT========================
+==========================================
+==========================================
+==========================================*/
+
+
+
+
+//FUNCTION THAT MAKES CHANGES OPACITY
+// function changeImagesOpacity (index) {
+//   var imgChanged = document.getElementsByClassName('picsUser');
+//    imgChanged[index].style.opacity = "1";
+// }
+//VAR AND LOOP "FOR" TO SELECT THE IMAGE CLICKED AND SET OPACITY TO "1"
+
+// var userimg = document.getElementsByClassName('userPictures');
+// for (let i=0; i<userimg.length; i++) {
+//   userimg[i].onclick = function (){
+//     for (var j = 0; j < userimg.length; j++) {
+//       userimg[j].style.opacity="0.5"
+//     }
+//     changeImagesOpacity(i);
+//   }
+// }
+
+
 
 
 /*=========================================

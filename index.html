@@ -23,72 +23,76 @@
         <!-- Add your site or application content here -->
         <h1>SHIFOUMI</h1>
 
+        <!-- INPUT TO ADD AN USERNAME -->
+
         <div class="inputContainer">
-        <input type="text" name="username" value="" placeholder="type your name" id="userName">
-        <button type="button" name="button">click</button>
+        <input type="text" name="username" value=" " placeholder="type your name" onkeyup="myFunction()" id="inputUser">
         </div>
+
+<section class="globalBattle">
+
 
         <div class="userChoice">
-          <h3>PLAYER NAME</h3>
-          <a href="#" class="user" onclick="feuille()">
-          <figure>
-            <img src="img/paper.png" alt="">
-          </figure>
-          </a>
 
-          <a href="#" class="user" onclick="pierre()">
-          <figure>
-            <img src="img/rock.png" alt="">
-          </figure>
-          </a>
+          <!-- USER NAME FILLED UP WITH INPUT -->
 
-          <a href="#" class="user" onclick="ciseaux()">
-          <figure>
-            <img src="img/scissors.png" alt="">
+          <h3 id="name">PLAYER NAME</h3>
+
+          <!-- CLICK ON A IMAGE FOR USER CHOICE -->
+
+
+          <figure tabindex="-1" class="picsUser">
+            <img tabindex="-1" id="feuille" class="userPictures" onclick='choiceUser("feuille")' src="img/paper.png" alt="papier" >
           </figure>
-          </a>
+
+          <figure tabindex="-1" class="picsUser">
+            <img tabindex="-1" id="pierre" class="userPictures" onclick='choiceUser("pierre")' src="img/rock.png" alt="pierre">
+          </figure>
+
+          <figure tabindex="-1" class="picsUser">
+            <img tabindex="-1" id="ciseaux" class="userPictures" onclick='choiceUser("ciseaux")' src="img/scissors.png" alt="ciseaux">
+          </figure>
 
         </div>
+
+        <!-- DISPLAY USER & COMPUTER CHOICE -->
+
 
         <div class="roundBattle">
           <h3>BATTLE</h3>
           <div class="battle">
-
+              <p id="scoreUser">Score user : 0</p>
+              <p id="scoreComputer">Scrore Computer : 0</p>
+              <p id="choixOrdi"></p>
+              <p id="choixUser"></p>
+              <p id="resultat"></p>
           </div>
         </div>
 
         <div class="computerChoice">
           <h3>COMPUTER</h3>
 
-          <a href="#">
-          <figure>
-            <img src="img/paper.png" alt="">
-          </figure>
-          </a>
+          <!-- COMPUTER CHOICE  -->
 
-          <a href="#">
-          <figure>
-            <img src="img/rock.png" alt="">
-          </figure>
-          </a>
 
-          <a href="#">
           <figure>
-            <img src="img/scissors.png" alt="">
+            <img src="img/paper.png" alt=""  id="paper">
           </figure>
-          </a>
+
+          <figure>
+            <img src="img/rock.png" alt=""  id="rock">
+          </figure>
+
+          <figure>
+            <img src="img/scissors.png" alt="" id="scissors">
+          </figure>
 
         </div>
 
-        <div class="score">
-
-          <h3>SCORE</h3>
-
-          <p>Score Player :</p>
-          <p>Score Computer :</p>
-
-        </div>
-
+</section>
+<footer>
+</footer>
+        <script type="text/javascript" src="js/main.js"></script>
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
@@ -104,7 +108,6 @@
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
         <script src="js/bootstrap.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
         <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
