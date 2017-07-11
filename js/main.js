@@ -13,6 +13,7 @@
 ==========================================*/
 
 var userimg = document.getElementsByClassName('userPictures');
+var computerImg = document.getElementsByClassName('computerPictures');
 var userChoice="";
 var computer = "";
 var player = 0;
@@ -42,6 +43,13 @@ function userOpacity () {
   document.getElementById(userChoice).style.opacity = '1';
 }
 
+function computerOpacity () {
+  for (var i=0; i<computerPictures.length; i++) {
+    computerImg[i].style.opacity="0.5";
+  }
+  document.getElementById(computer).style.opacity = '0.5';
+
+}
 
 //FUNCTION USER CHOICE
 function choiceUser(choix){
